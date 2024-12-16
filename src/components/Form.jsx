@@ -20,7 +20,7 @@ export default function Form(){
             <fieldset>
                 <legend>Education</legend>
                 <label >
-                    School Name:{" "}
+                    Institution:{" "}
                     <input type="text" />
                 </label>
                 <label >
@@ -28,7 +28,7 @@ export default function Form(){
                     <input type="email" />
                 </label>
                 <label >
-                    Date of Study:{" "}
+                    Programme Duration:{" "}
                     <input type="tel" />
                 </label>
             </fieldset>
