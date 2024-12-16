@@ -7,8 +7,10 @@ export default function CV(){
                     Jevaughn Vickers
                 </h1>
                 <h3>Software Developer</h3>
-                <p>1 (555) 825-6374</p>
-                <p>jevaughn@meteor.com</p>
+                <div className="section-one-info">
+                    <p>1 (555) 825-6374</p>
+                    <p>jevaughn@meteor.com</p>
+                </div>
             </section>
             <section>
                 <h2>Education</h2>
@@ -30,6 +32,9 @@ export default function CV(){
                 <h4>Employment Duration</h4>
                 <p>January 24, 2025 - present</p>
             </section>
+            <div className="btn-parent">
+                <button>Edit</button>
+            </div>
         </div>
     )
 }
