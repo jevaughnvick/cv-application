@@ -1,36 +1,49 @@
-export default function CV(){
+export default function CV({
+                            name,
+                            email,
+                            phone,
+                            school,
+                            programme,
+                            programmeStartDate,
+                            programmeEndDate,
+                            company,
+                            position,
+                            description,
+                            jobStartDate,
+                            jobEndDate,
+}){
 
     return (
         <div className="cv">
             <section>
                 <h1>
-                    Jevaughn Vickers
+                    {name}
                 </h1>
-                <h3>Software Developer</h3>
+                <h3>{position}</h3>
                 <div className="section-one-info">
-                    <p>1 (555) 825-6374</p>
-                    <p>jevaughn@meteor.com</p>
+                    <p>{phone}</p>
+                    <p>{email}</p>
                 </div>
             </section>
             <section>
                 <h2>Education</h2>
                 <h4>Institution</h4>
-                <p>Florida International University</p>
+                <p>{school}</p>
                 <h4>Programme</h4>
-                <p>Bachelor of Science in Computer Engineering</p>
+                <p>{programme}</p>
                 <h4>Programme Duration</h4>
-                <p>September 6, 2025 - June 19, 2029</p>
+                <p>{programmeStartDate + " " + programmeEndDate}</p>
             </section>
             <section>
                 <h2>Professional Experience</h2>
                 <h4>Company</h4>
-                <p>Main Origin</p>
+                <p>{company}</p>
                 <h4>Profession</h4>
-                <p>Chief Developer</p>
+                <p>{position}</p>
                 <h4>Job Description</h4>
-                <p>Head of software development department</p>
+                <p>{description}</p>
                 <h4>Employment Duration</h4>
-                <p>January 24, 2025 - present</p>
+                <p>{jobStartDate + " " + jobEndDate}</p>
             </section>
             <div className="btn-parent">
                 <button>Edit</button>

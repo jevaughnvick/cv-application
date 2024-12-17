@@ -25,7 +25,7 @@ export default function Form({
                             onJobStartDateChange,
                             jobEndDate,
                             onJobEndDateChange
-                            }){
+}){
 
     return (
         <form className="">
