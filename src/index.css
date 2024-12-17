@@ -20,11 +20,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 form{
     border: 1px solid gray;
-    width: clamp(500px, 40%, 550px);
+    width: clamp(460px, 40%, 550px);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -55,6 +56,7 @@ input:not(input[type="submit"]){
     background-color: #f1f1f1;
     outline: none;
     padding: .5rem .5rem;
+    width: 55%;
 }
 
 .submit-parent{
