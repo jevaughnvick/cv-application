@@ -12,6 +12,10 @@ export default function App(){
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
+    const [school, setSchool] = useState("");
+    const [programme, setProgramme] = useState("");
+    const [programmeStartDate, setProgrammeStartDate] = useState("");
+    const [programmeEndDate, setProgrammeEndDate] = useState("");
 
 
     function onNameChange(e){
@@ -29,6 +33,26 @@ export default function App(){
         setPhone(e.target.value);
     }
 
+    function onSchoolChange(e){
+
+        setSchool(e.target.value);
+    }
+
+    function onProgrammeChange(e){
+        
+        setProgramme(e.target.value);
+    }
+
+    function onProgrammeStartDateChange(e){
+        
+        setProgrammeStartDate(e.target.value);
+    }
+
+    function onProgrammeEndDateChange(e){
+        
+        setProgrammeEndDate(e.target.value);
+    }
+
     return(
         <>
             <CV />
@@ -39,6 +63,14 @@ export default function App(){
             onEmailChange={onEmailChange}
             phone={phone}
             onPhoneChange={onPhoneChange}
+            school={school}
+            onSchoolChange={onSchoolChange}
+            programme={programme}
+            onProgrammeChange={onProgrammeChange}
+            programmeStartDate={programmeStartDate}
+            onProgrammeStartDateChange={onProgrammeStartDateChange}
+            programmeEndDate={programmeEndDate}
+            onProgrammeEndDateChange={onProgrammeEndDateChange}
             />
         </>
     )

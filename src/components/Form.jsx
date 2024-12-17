@@ -6,7 +6,15 @@ export default function Form({
                             email,
                             onEmailChange,
                             phone,
-                            onPhoneChange
+                            onPhoneChange,
+                            school,
+                            onSchoolChange,
+                            programme,
+                            onProgrammeChange,
+                            programmeStartDate,
+                            onProgrammeStartDateChange,
+                            programmeEndDate,
+                            onProgrammeEndDateChange
                              }){
 
     return (
@@ -30,19 +38,23 @@ export default function Form({
                 <legend>Education</legend>
                 <label >
                     Institution:{" "}
-                    <input type="text" />
+                    <input type="text" value={school} onChange={onSchoolChange}/>
                 </label>
                 <label >
                     Programme:{" "}
-                    <input type="text" />
+                    <input type="text" value={programme} onChange={onProgrammeChange}/>
                 </label>
                 <label >
                     Programme Start Date:{" "}
-                    <input type="date" />
+                    <input type="text"
+                    value={programmeStartDate}
+                    onChange={onProgrammeStartDateChange}/>
                 </label>
                 <label >
                     Programme End Date:{" "}
-                    <input type="date" />
+                    <input type="text"
+                    value={programmeEndDate}
+                    onChange={onProgrammeEndDateChange}/>
                 </label>
             </fieldset>
             <fieldset>
