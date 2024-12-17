@@ -1,4 +1,13 @@
-export default function Form(){
+import { useState } from "react"
+
+export default function Form({ 
+                            name,
+                            onNameChange,
+                            email,
+                            onEmailChange,
+                            phone,
+                            onPhoneChange
+                             }){
 
     return (
         <form className="">
@@ -6,15 +15,15 @@ export default function Form(){
                 <legend>Personal Information</legend>
                 <label >
                     Name:
-                    <input type="text" />
+                    <input type="text" value={name} onChange={onNameChange}/>
                 </label>
                 <label >
                     Email:{" "}
-                    <input type="email" />
+                    <input type="email" value={email} onChange={onEmailChange}/>
                 </label>
                 <label >
                     Phone:{" "}
-                    <input type="tel" />
+                    <input type="tel" value={phone} onChange={onPhoneChange}/>
                 </label>
             </fieldset>
             <fieldset>
