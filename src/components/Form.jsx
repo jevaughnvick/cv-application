@@ -5,7 +5,7 @@ export default function Form(){
             <fieldset>
                 <legend>Personal Information</legend>
                 <label >
-                    Name:{" "}
+                    Name:
                     <input type="text" />
                 </label>
                 <label >
@@ -25,33 +25,43 @@ export default function Form(){
                 </label>
                 <label >
                     Programme:{" "}
-                    <input type="email" />
+                    <input type="text" />
                 </label>
                 <label >
-                    Programme Duration:{" "}
-                    <input type="tel" />
+                    Programme Start Date:{" "}
+                    <input type="date" />
+                </label>
+                <label >
+                    Programme End Date:{" "}
+                    <input type="date" />
                 </label>
             </fieldset>
             <fieldset>
                 <legend>Profession</legend>
                 <label >
                     Company Name:{" "}
-                    <input type="tel" />
+                    <input type="text" />
                 </label>
                 <label >
                     Position:{" "}
-                    <input type="tel" />
+                    <input type="text" />
                 </label>
                 <label >
                     Job Description:{" "}
-                    <input type="tel" />
+                    <input type="text" />
                 </label>
                 <label >
-                    Job Duration:{" "}
-                    <input type="tel" />
+                    Job Start Date:{" "}
+                    <input type="date" />
+                </label>
+                <label >
+                    Job End Date:{" "}
+                    <input type="date" />
                 </label>
             </fieldset>
-            <input type="submit" value="Generate CV" />
+            <div className="submit-parent">
+                <input type="submit" value="Generate CV" />
+            </div>
         </form>
     )
 }
