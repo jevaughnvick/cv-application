@@ -4,7 +4,10 @@ import CV from "./components/CV";
 import "./App.css";
 
 
+// if(document.getElementById("cv").classList.contains("hidden")){
 
+//     document.getElementById("cv").classList.remove("hidden");
+// }
 
 
 export default function App(){
@@ -21,6 +24,9 @@ export default function App(){
     const [description, setDescription] = useState("");
     const [jobStartDate, setJobStartDate] = useState("");
     const [jobEndDate, setJobEndDate] = useState("");
+    const [showcv, setShowcv] = useState(false);
+    const [showForm, setShowForm] = useState(true);
+
 
 
 
@@ -84,10 +90,44 @@ export default function App(){
         setJobEndDate(e.target.value);
     }
 
+    function onSubmit(e){
+
+        e.preventDefault();
+        
+        if(!(name && email && phone && school && programme && company && position)){
+
+            alert("Please fill in all details.");
+            return;
+        }
+        
+        setShowcv(true);
+        setShowForm(false);
+    }
+
+    function onEdit(){
+
+        setShowcv(false);
+        setShowForm(true);
+    }
+
     return(
         <>
-            <CV />
-            <Form
+            {showcv && <CV 
+            name={name}
+            email={email}
+            phone={phone}
+            school={school}
+            programme={programme}
+            programmeStartDate={programmeStartDate}
+            programmeEndDate={programmeEndDate}
+            company={company}
+            position={position}
+            description={description}
+            jobStartDate={jobStartDate}
+            jobEndDate={jobEndDate}
+            onEdit={onEdit}
+            />}
+            {showForm && <Form
             name={name}
             onNameChange={onNameChange}
             email={email}
@@ -112,7 +152,8 @@ export default function App(){
             onJobStartDateChange={onJobStartDateChange}
             jobEndDate={jobEndDate}
             onJobEndDateChange={onJobEndDateChange}
-            />
+            onSubmit={onSubmit}
+            />}
         </>
     )
 }

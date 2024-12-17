@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 export default function Form({ 
                             name,
                             onNameChange,
@@ -24,11 +22,12 @@ export default function Form({
                             jobStartDate,
                             onJobStartDateChange,
                             jobEndDate,
-                            onJobEndDateChange
+                            onJobEndDateChange,
+                            onSubmit
 }){
 
     return (
-        <form className="">
+        <form className="s">
             <fieldset>
                 <legend>Personal Information</legend>
                 <label >
@@ -91,7 +90,7 @@ export default function Form({
                 </label>
             </fieldset>
             <div className="submit-parent">
-                <input type="submit" value="Generate CV" />
+                <input type="submit" value="Generate CV" onClick={onSubmit}/>
             </div>
         </form>
     )

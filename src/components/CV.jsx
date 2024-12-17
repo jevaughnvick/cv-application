@@ -11,10 +11,11 @@ export default function CV({
                             description,
                             jobStartDate,
                             jobEndDate,
+                            onEdit
 }){
 
     return (
-        <div className="cv">
+        <div id="cv" className="">
             <section>
                 <h1>
                     {name}
@@ -46,7 +47,7 @@ export default function CV({
                 <p>{jobStartDate + " " + jobEndDate}</p>
             </section>
             <div className="btn-parent">
-                <button>Edit</button>
+                <button onClick={onEdit}>Edit</button>
             </div>
         </div>
     )
