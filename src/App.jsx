@@ -16,6 +16,12 @@ export default function App(){
     const [programme, setProgramme] = useState("");
     const [programmeStartDate, setProgrammeStartDate] = useState("");
     const [programmeEndDate, setProgrammeEndDate] = useState("");
+    const [company, setCompany] = useState("");
+    const [position, setPosition] = useState("");
+    const [description, setDescription] = useState("");
+    const [jobStartDate, setJobStartDate] = useState("");
+    const [jobEndDate, setJobEndDate] = useState("");
+
 
 
     function onNameChange(e){
@@ -53,6 +59,31 @@ export default function App(){
         setProgrammeEndDate(e.target.value);
     }
 
+    function onCompanyChange(e){
+
+        setCompany(e.target.value);
+    }
+
+    function onPositionChange(e){
+
+        setPosition(e.target.value);
+    }
+
+    function onDescriptionChange(e){
+
+        setDescription(e.target.value);
+    }
+
+    function onJobStartDateChange(e){
+
+        setJobStartDate(e.target.value);
+    }
+
+    function onJobEndDateChange(e){
+
+        setJobEndDate(e.target.value);
+    }
+
     return(
         <>
             <CV />
@@ -71,6 +102,16 @@ export default function App(){
             onProgrammeStartDateChange={onProgrammeStartDateChange}
             programmeEndDate={programmeEndDate}
             onProgrammeEndDateChange={onProgrammeEndDateChange}
+            company={company}
+            onCompanyChange={onCompanyChange}
+            position={position}
+            onPositionChange={onPositionChange}
+            description={description}
+            onDescriptionChange={onDescriptionChange}
+            jobStartDate={jobStartDate}
+            onJobStartDateChange={onJobStartDateChange}
+            jobEndDate={jobEndDate}
+            onJobEndDateChange={onJobEndDateChange}
             />
         </>
     )

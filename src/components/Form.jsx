@@ -14,8 +14,18 @@ export default function Form({
                             programmeStartDate,
                             onProgrammeStartDateChange,
                             programmeEndDate,
-                            onProgrammeEndDateChange
-                             }){
+                            onProgrammeEndDateChange,
+                            company,
+                            onCompanyChange,
+                            position,
+                            onPositionChange,
+                            description,
+                            onDescriptionChange,
+                            jobStartDate,
+                            onJobStartDateChange,
+                            jobEndDate,
+                            onJobEndDateChange
+                            }){
 
     return (
         <form className="">
@@ -61,23 +71,23 @@ export default function Form({
                 <legend>Profession</legend>
                 <label >
                     Company Name:{" "}
-                    <input type="text" />
+                    <input type="text" value={company} onChange={onCompanyChange}/>
                 </label>
                 <label >
                     Position:{" "}
-                    <input type="text" />
+                    <input type="text" value={position} onChange={onPositionChange}/>
                 </label>
                 <label >
                     Job Description:{" "}
-                    <input type="text" />
+                    <input type="text" value={description} onChange={onDescriptionChange}/>
                 </label>
                 <label >
                     Job Start Date:{" "}
-                    <input type="date" />
+                    <input type="text" value={jobStartDate} onChange={onJobStartDateChange}/>
                 </label>
                 <label >
                     Job End Date:{" "}
-                    <input type="date" />
+                    <input type="text" value={jobEndDate} onChange={onJobEndDateChange}/>
                 </label>
             </fieldset>
             <div className="submit-parent">
