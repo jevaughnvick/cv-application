@@ -100,12 +100,14 @@ export default function App(){
             return;
         }
         
+        window.scrollTo(0, 0);
         setShowcv(true);
         setShowForm(false);
     }
 
     function onEdit(){
 
+        window.scrollTo(0, 0);
         setShowcv(false);
         setShowForm(true);
     }
