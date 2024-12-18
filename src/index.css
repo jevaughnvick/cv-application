@@ -24,7 +24,7 @@ body{
 
 form{
     border: 1px solid gray;
-    width: clamp(460px, 40%, 550px);
+    width: clamp(470px, 40%, 550px);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -45,6 +45,7 @@ legend{
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 label{
@@ -67,8 +68,12 @@ input:not(input[type="submit"]){
 }
 
 input[type="submit"]{
+    appearance: none;
+    border: 1px solid gray;
+    background-color: #f1f1f1;
     padding: 4px 32px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #cv{
@@ -117,6 +122,12 @@ input, button, textarea, select{
 button{
     padding: 4px 32px;
     font-weight: bold;
+    appearance: none;
+    background-color: darkcyan;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: white;
 }
 
 img, picture, video, canvas, svg{
@@ -137,7 +148,47 @@ h1, h2, h3, h4, h5, h6{
 }
 
 fieldset{
-    border-right: transparent;
-    border-left: transparent;
-    border-bottom: transparent;
+    border: none;
+}
+
+@media only screen and (max-width: 600px){
+
+    form{
+        scale: .9;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+    #cv{
+        scale: .9;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    form{
+        scale: .8;
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    #cv{
+        scale: .8;
+    }
+}
+
+@media only screen and (max-width: 400px){
+
+    form{
+        scale: .7;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    #cv{
+        scale: .7;
+    }
 }
